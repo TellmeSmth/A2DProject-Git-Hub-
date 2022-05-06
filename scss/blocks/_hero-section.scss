@@ -1,0 +1,109 @@
+.hero-section {
+  background-color: $dark-blue;
+  padding-bottom: 127px;
+}
+
+.hero-section__wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 105px;
+}
+
+.hero-section__wrapper-line {
+  margin: 0;
+  display: inline-block;
+  width: 150px;
+  background-color: $color-primary;
+  align-items: flex-start;
+}
+
+.hero-section__wrapper-heading {
+  padding-top: 63px;
+  margin: 0;
+  max-width: 530px;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: $white;
+}
+
+.hero-section__wrapper-paragraph {
+  padding-top: 16px;
+  padding-bottom: 24px;
+  margin: 0;
+  max-width: 540px;
+  font-family: $Karla;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: $white;
+}
+
+.hero-section__wrapper-btn {
+  background-color: transparent;
+  border: none;
+  border: 2px solid $white;
+  padding: 12px 27px;
+  font-family: $Karla;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: $white;
+  &:hover {
+    background-color: $white;
+    color: black;
+  }
+}
+
+.hero-section__wrapper-img {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  right: 0px;
+}
+
+.hero-section__wrapper-wave {
+  position: absolute;
+  z-index: 3;
+  top: -60px;
+  right: 0px;
+}
+
+.hero-section__waves {
+  position: absolute;
+  bottom: -10;
+  left: 0;
+  z-index: 4;
+}
+
+@include breakpoint-down(1095px) {
+  .hero-section__wrapper-img {
+    position: static;
+    padding-top: 30px;
+  }
+}
+
+@include breakpoint-down(580px) {
+  .hero-section__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-section__wrapper-wave {
+    position: absolute;
+    z-index: 0;
+    top: -60px;
+    right: 0px;
+  }
+}
+
+@include breakpoint-down(420px) {
+  .hero-section__wrapper-heading {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
